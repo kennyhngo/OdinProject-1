@@ -1,3 +1,15 @@
+:root
+{
+    --blue: #00274C;
+    --maize: #FFCB05;
+}
+
+div.content
+{
+    width: 960px;
+    margin: 0 auto;
+}
+
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column 
 {
@@ -14,12 +26,24 @@
   display: table;
 }
 
-a.button
+.button
 {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 16px 0px 1px;
+  cursor: pointer;
+}
 
-    text-decoration: none;
-    color: initial;
+h1
+{
+    background-color: var(--maize);
+    color: var(--blue);
+    font-size: 48px;
+    text-align: center;
 }

@@ -5,37 +5,68 @@
     <title>UofM - Odin Project</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        #maps
+        {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>University of Michigan feat. The Odin Project</h1>
+    <div class="content">
+        <h1>University of Michigan feat. The Odin Project</h1>
 
-    <nav>
-        <button onclick="location.href='./university/study-spots.html'" type="button">
-            Study Spots</button>
-        &emsp;
-        <button onclick="location.href='./university/about-me.html'" type="button">
-            About Me</button>
-    </nav>
+        <nav>
+            <a class="button" href="./university/study-spots.html">Study Spots</a>
 
-    <br><br>
+            <a class="button" href="./university/about-me.html">About Me</a>
+        </nav>
 
-    <img src="https://umich.edu/skins/um2013/media/images/U-M-logo-preview.jpg" style="width: 60vw; min-width: 330px"
-        alt="Univerity of Michigan Logo">
-    <!-- The Odin Project at this point has not covered div yet, so this
+        <br>
+
+        <img src="https://umich.edu/skins/um2013/media/images/U-M-logo-preview.jpg"
+            style="width: 80vw; min-width: 330px" alt="Univerity of Michigan Logo">
+        <!-- The Odin Project at this point has not covered div yet, so this
         code is a result from google searching and implementing them. The
         Odin Project also did not go over CSS yet, so be wary of that. -->
-    <div class="row">
-        <div class="column">
-            <img src="https://campusvisitorguides.com/umich/wp-content/uploads/sites/26/2020/05/main-campus-map.png"
-                style="width: 48vw; min-width: 330px" alt="Map of University of Michigan Central Campus">
+
+        <button onclick="showMap()" id="mapbtn" class="button">Show Campus Map</button>
+
+        <div id="maps">
+            <div class="row">
+                <div class="column">
+                    <img src="https://campusvisitorguides.com/umich/wp-content/uploads/sites/26/2020/05/main-campus-map.png"
+                        style="width: 70vw; min-width: 330px" alt="Map of University of Michigan Central Campus">
+                </div>
+
+                <div>
+                    <img src="https://campusvisitorguides.com/umich/wp-content/uploads/sites/26/2020/05/north-campus-map.png"
+                        style="width: 60vw; min-width: 330px" alt="Map of University of Michigan North Campus">
+                </div>
+            </div>
         </div>
 
-        <div>
-            <img src="https://campusvisitorguides.com/umich/wp-content/uploads/sites/26/2020/05/north-campus-map.png"
-                style="width: 40vw; min-width: 330px" alt="Map of University of Michigan North Campus">
-        </div>
     </div>
+
+    <script>
+        function showMap()
+        {
+            var btnText = document.getElementById("mapbtn");
+            var mapShown = document.getElementById("maps");
+            if (btnText.innerHTML === "Show Campus Map")
+            {
+                btnText.innerHTML = "Hide Campus Map";
+                mapShown.style.display = "block";
+            }
+            else
+            {
+                btnText.innerHTML = "Show Campus Map";
+                mapShown.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
