@@ -1,0 +1,59 @@
+.picTEXT > img 
+{
+    float: left;
+    margin-right: 20px;
+}
+
+.PICtext 
+{
+    *zoom:1
+}
+
+.PICtext:before,
+.PICtext:after 
+{
+    content: " ";
+    display: table;
+    overflow: auto;
+}
+
+.PICtext:after 
+{
+    clear: both;
+    overflow: auto;
+}
+
+.pads
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid lightslategray;
+    border-bottom: 1px solid lightslategray;
+}
+
+/* ABOVE IS CODE TO ALIGN WORD NEXT TO THE IMAGE */
+
+li, .room-name
+{
+    color: blue;
+}
+
+li
+{
+    font-size: 30px;
+}
+
+.room-name
+{
+    font-size: 24px;
+}
+
+.words
+{
+    text-align: justify;
+    overflow: auto;
+    direction: ltr;
+    display: block;
+    font-size: 24px;
+    color: black;
+}
